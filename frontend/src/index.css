@@ -1,0 +1,51 @@
+:root {
+  /* Dark theme base */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-tertiary: #1a1a24;
+  
+  /* Gradient accents - deep purple to electric blue */
+  --gradient-start: #6366f1;
+  --gradient-mid: #8b5cf6;
+  --gradient-end: #06b6d4;
+  --accent: #818cf8;
+  --accent-dim: rgba(129, 140, 248, 0.4);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 20px;
+  
+  /* Text */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Interactive */
+  --hover-glow: 0 0 30px rgba(99, 102, 241, 0.3);
+  --btn-hover-scale: 1.02;
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
