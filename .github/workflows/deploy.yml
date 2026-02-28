@@ -1,0 +1,28 @@
+name: Deploy Serverless App
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Deploy to Dev
+        if: github.ref == 'refs/heads/develop'
+        run: echo "Deploying to DEV environment"
+
+      - name: Deploy to Prod
+        if: github.ref == 'refs/heads/main'
+        run: echo "Deploying to PROD environment"
